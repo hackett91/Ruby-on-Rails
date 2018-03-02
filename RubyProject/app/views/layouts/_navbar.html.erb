@@ -1,0 +1,15 @@
+<nav>
+  <ul>
+      <li>Home</li>
+      <% if !user_signed_in?%>
+      <li><%= link_to("Sign in", new_user_session_path) %> </li> <!-- <li>Sign in  <a href="new_user_session"></a></li> -->
+    <li>  <%= link_to("Sign Up", new_user_registration_path) %> </li>      <!--<li>Sign up</li> -->
+      <% end %>
+      <% if user_signed_in?%>
+    <li>  <%= link_to("Sign out", destroy_user_session_path, method: "delete") %> </li>     <!-- <li><a href=" destroy_user_session_path">Sign out</a></li>-->
+    <li> <%= link_to("Posts", posts_path)%></li>
+    <p> hello my name is cian yp   </p>
+      <% end %>
+  </ul>
+
+</nav>
