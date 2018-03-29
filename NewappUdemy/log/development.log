@@ -1679,3 +1679,131 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 108ms (Views: 101.2ms | ActiveRecord: 1.0ms)
 
 
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPortfolio Load (1.1ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-03-30 00:01:58 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/cian/.rvm/gems/ruby-2.4.1/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/cian/.rvm/gems/ruby-2.4.1/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 6ms (Views: 4.1ms)
+
+
+Started GET "/portfolios/5/edit" for 127.0.0.1 at 2018-03-30 00:02:14 +0100
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering portfolios/edit.html.erb within layouts/application
+  Rendered portfolios/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 66ms (Views: 37.6ms | ActiveRecord: 3.1ms)
+
+
+Started PATCH "/portfolios/5" for 127.0.0.1 at 2018-03-30 00:04:40 +0100
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for PortfoliosController):
+  
+actionpack (5.1.5) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.5) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.5) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.5) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started PATCH "/portfolios/5" for 127.0.0.1 at 2018-03-30 00:13:47 +0100
+  
+SyntaxError (/media/cian/cianRW/Ruby on Rails/NewappUdemy/app/controllers/portfolios_controller.rb:29: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+t_to portfolios_path, notice 'Portfolio was successfullly up
+                              ^):
+  
+app/controllers/portfolios_controller.rb:29: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+Started PATCH "/portfolios/5" for 127.0.0.1 at 2018-03-30 00:14:28 +0100
+Processing by PortfoliosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kapP6leNqcsmYTd84GTp+0CF0TI095IorqKcH6t00Lu5av7k3JpcR1BRQx11YWh/7e3GF7+YGm6QWioNm9vfJg==", "portfolio"=>{"title"=>"Portfolio title: 4 ur", "subtitle"=>"my great service ", "body"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,\r\n    when an unknown printer took a galley of type and scrambled it to make a type\r\n       specimen book. It has survived not only five centuries, but also the leap into\r\n        electronic typesetting, remaining essentially unchanged. It was popularised in\r\n         the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,\r\n          and more recently with desktop publishing software like Aldus PageMaker including\r\n           versions of Lorem Ipsum."}, "commit"=>"Update Portfolio", "id"=>"5"}
+Completed 500 Internal Server Error in 4ms
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/portfolios_controller.rb:28:in `block in update'
+app/controllers/portfolios_controller.rb:27:in `update'
+Started GET "/portfolios/5/edit" for 127.0.0.1 at 2018-03-30 00:19:24 +0100
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering portfolios/edit.html.erb within layouts/application
+  Rendered portfolios/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 44ms (Views: 31.8ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/portfolios/5" for 127.0.0.1 at 2018-03-30 00:19:31 +0100
+Processing by PortfoliosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DqJZxU8r9OrC/xc3KRhoiHJdsywYe6AbDu0O8TYy1sImYujLxDwBZrTPY1a8HekM3zWkCZMUKF0wFbjjBp3ZXw==", "portfolio"=>{"title"=>"Portfolio title: 4 return", "subtitle"=>"my great service ", "body"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,\r\n    when an unknown printer took a galley of type and scrambled it to make a type\r\n       specimen book. It has survived not only five centuries, but also the leap into\r\n        electronic typesetting, remaining essentially unchanged. It was popularised in\r\n         the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,\r\n          and more recently with desktop publishing software like Aldus PageMaker including\r\n           versions of Lorem Ipsum."}, "commit"=>"Update Portfolio", "id"=>"5"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/portfolios_controller.rb:28:in `block in update'
+app/controllers/portfolios_controller.rb:27:in `update'
+Started PATCH "/portfolios/5" for 127.0.0.1 at 2018-03-30 00:34:01 +0100
+Processing by PortfoliosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DqJZxU8r9OrC/xc3KRhoiHJdsywYe6AbDu0O8TYy1sImYujLxDwBZrTPY1a8HekM3zWkCZMUKF0wFbjjBp3ZXw==", "portfolio"=>{"title"=>"Portfolio title: 4 return", "subtitle"=>"my great service ", "body"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,\r\n    when an unknown printer took a galley of type and scrambled it to make a type\r\n       specimen book. It has survived not only five centuries, but also the leap into\r\n        electronic typesetting, remaining essentially unchanged. It was popularised in\r\n         the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,\r\n          and more recently with desktop publishing software like Aldus PageMaker including\r\n           versions of Lorem Ipsum."}, "commit"=>"Update Portfolio", "id"=>"5"}
+  [1m[36mPortfolio Load (1.7ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (537.6ms)[0m  [1m[33mUPDATE "portfolios" SET "title" = ?, "body" = ?, "updated_at" = ? WHERE "portfolios"."id" = ?[0m  [["title", "Portfolio title: 4 return"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,\r\n    when an unknown printer took a galley of type and scrambled it to make a type\r\n       specimen book. It has survived not only five centuries, but also the leap into\r\n        electronic typesetting, remaining essentially unchanged. It was popularised in\r\n         the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,\r\n          and more recently with desktop publishing software like Aldus PageMaker including\r\n           versions of Lorem Ipsum."], ["updated_at", "2018-03-29 23:34:02.016966"], ["id", 5]]
+  [1m[35m (145.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 719ms (ActiveRecord: 686.1ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-03-30 00:34:02 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 82ms (Views: 72.1ms | ActiveRecord: 0.9ms)
+
+
