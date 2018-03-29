@@ -33,7 +33,7 @@ puts "5 skills created"
          the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
           and more recently with desktop publishing software like Aldus PageMaker including
            versions of Lorem Ipsum.",
-    main_image: "http://via.placeholder.com/600x400"
+    main_image: "http://via.placeholder.com/300x200"
   )
 end
 
